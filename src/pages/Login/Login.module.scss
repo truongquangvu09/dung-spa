@@ -1,0 +1,22 @@
+.wrapper {
+    background-color: rgb(239, 240, 255);
+    min-height: 100vh;
+    font-family: "Sora", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 2rem;
+}
+.form-login {
+    background-color: white;
+    padding: 2rem;
+    min-width: 500px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 14px 3px rgb(222, 224, 250);
+    .title {
+        text-align: center;
+        color: rgb(119, 119, 252);
+    }
+}

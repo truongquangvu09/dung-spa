@@ -1,0 +1,13 @@
+.tab-wrapper {
+    .tab {
+        font-size: 17.5px;
+        align-items: flex-start;
+        padding: 15px 10px;
+        min-height: 55px;
+    }
+}
+.tab-wrapper .tab .icon {
+    margin-bottom: 0;
+    // padding-right: 5px;
+    margin-right: 5px;
+}

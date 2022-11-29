@@ -1,0 +1,49 @@
+.wrapper {
+    // position: fixed;
+    text-align: center;
+    background-color: rgb(31, 30, 29);
+}
+.logo {
+    padding-top: 60px;
+    img {
+        max-width: 200px;
+    }
+}
+.contact {
+    p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff99;
+        font-size: 16px;
+        line-height: 30px;
+        &:hover {
+            color: rgb(232, 210, 184);
+        }
+    }
+}
+.social {
+    margin-top: 10px;
+
+    a {
+        margin: 0 10px;
+        color: #ffffff99;
+        font-size: 17px;
+        &:hover {
+            color: aqua;
+        }
+    }
+}
+.copyright {
+    padding: 50px 0 30px;
+    color: #ffffff80;
+    font-size: 16px;
+    span {
+        &:hover {
+            color: aqua;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.wrapper {
+    width: 482px;
+}
+.inner {
+    border: 2px solid #2d2a27;
+    padding: 15px 30px 30px;
+}
+.order-review {
+    th {
+        text-align: left;
+        border-bottom: 1px solid #ececec;
+        line-height: 1.05;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 7.2px 0 7.2px 0;
+        font-size: 14.4px;
+    }
+    td {
+        border-bottom: 1px solid #ececec;
+    }
+
+    thead th {
+        border-width: 3px;
+    }
+    tfoot th {
+        font-size: 85%;
+        text-transform: inherit;
+        letter-spacing: 0;
+    }
+
+    thead th:last-of-type,
+    .shop_table tr td:last-of-type {
+        text-align: right;
+    }
+    tr td:last-of-type {
+        text-align: right;
+    }
+    .cart_item td {
+        padding: 15px 0;
+        font-size: 14.4px;
+        color: #666;
+    }
+    .order-total {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #23282d;
+    }
+    .order-total th {
+        border-width: 3px;
+    }
+    .order-total td {
+        border-width: 3px;
+
+        .price-sum {
+            color: #23282d;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    .Price-amount {
+        white-space: nowrap;
+        color: #696b6b;
+        font-weight: bold;
+        font-size: 14.4px;
+    }
+}
+.checkout-payment {
+    ul {
+        li {
+            padding: 0;
+            padding-top: 7px;
+            border-top: 1px solid #ececec;
+            input[type="radio"] {
+                margin-right: 10px;
+                font-size: 16px;
+                margin-bottom: 1em;
+            }
+            p {
+                margin-bottom: 7.2px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    button[type="submit"] {
+        background-color: #23282d;
+        margin-bottom: 15.52px;
+        color: #fff;
+        border-color: rgba(0, 0, 0, 0.05);
+        text-transform: uppercase;
+        font-size: 0.97em;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        font-weight: bolder;
+        text-align: center;
+        border: 1px solid transparent;
+        margin-right: 1em;
+        text-shadow: none;
+        line-height: 2.4em;
+        min-height: 2.5em;
+        padding: 0 1.2em;
+        transition: all 0.5s;
+        &:hover {
+            background-color: aqua;
+        }
+    }
+}
+.privacy-text {
+    p {
+        font-size: 13.6px;
+        margin-bottom: 7px;
+        a {
+            cursor: pointer;
+        }
+    }
+}
