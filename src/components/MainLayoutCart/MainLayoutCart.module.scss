@@ -1,7 +1,7 @@
 .wrapper {
     width: 100%;
     position: relative;
-    // padding-top: 100px;
+    padding-top: 100px;
 }
 .inner {
     position: relative;
@@ -68,7 +68,7 @@
 .sidebar {
 }
 .search {
-    input[type="search"] {
+    input[type='search'] {
         border: 1px solid #ddd;
         padding: 0 0.75em;
         height: 2.8em;
@@ -90,7 +90,7 @@
             background-color: #fff;
         }
     }
-    button[type="submit"] {
+    button[type='submit'] {
         background-color: #23282d;
         border-color: rgba(0, 0, 0, 0.05);
         position: relative;

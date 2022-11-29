@@ -28,36 +28,36 @@ function App() {
     return (
         <div>
             <Router>
-                {/* <Navbar /> */}
+                <Navbar />
                 <Routes>
-                    <Route path="" element={<Navbar />}>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/Introduce" element={<AboutPage />} />
-                        <Route path="/Shop" element={<Shoppage />}>
-                            <Route path="" element={<ProductListDetail />} />
-                            <Route path=":id" element={<ProductDetail />} />
-                            <Route path="New_Detail" element={<NewDetail />} />
-                        </Route>
-                        <Route path="/Services" element={<ServicesPage />} />
-                        <Route path="/Contact" element={<ContactPage />} />
-                        <Route path="/Booking" element={<BookingPage />} />
-                        <Route path="/Cart" element={<CartPage />} />
-                        <Route
-                            path="ViewPayCart"
-                            element={
-                                <ProtectedRouter>
-                                    <ViewPayCart />
-                                </ProtectedRouter>
-                            }
-                        />
-                        <Route path="/News" element={<NewsPage />}>
-                            <Route path="" element={<NewsListContent />} />
-                            <Route path=":id" element={<NewsDetailContent />} />
-                        </Route>
-                        <Route path="/UserProfile" element={<Profiles />} />
-                        <Route path="/Admin" element={<Admin />} />
-                        <Route path="/Sales" element={<SalesManagement />} />
+                    {/* <Route path="" element={<Navbar />}> */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/Introduce" element={<AboutPage />} />
+                    <Route path="/Shop" element={<Shoppage />}>
+                        <Route path="" element={<ProductListDetail />} />
+                        <Route path=":id" element={<ProductDetail />} />
+                        <Route path="New_Detail" element={<NewDetail />} />
                     </Route>
+                    <Route path="/Services" element={<ServicesPage />} />
+                    <Route path="/Contact" element={<ContactPage />} />
+                    <Route path="/Booking" element={<BookingPage />} />
+                    <Route path="/Cart" element={<CartPage />} />
+                    <Route
+                        path="ViewPayCart"
+                        element={
+                            <ProtectedRouter>
+                                <ViewPayCart />
+                            </ProtectedRouter>
+                        }
+                    />
+                    <Route path="/News" element={<NewsPage />}>
+                        <Route path="" element={<NewsListContent />} />
+                        <Route path=":id" element={<NewsDetailContent />} />
+                    </Route>
+                    <Route path="/UserProfile" element={<Profiles />} />
+                    <Route path="/Admin" element={<Admin />} />
+                    <Route path="/Sales" element={<SalesManagement />} />
+                    {/* </Route> */}
                 </Routes>
                 <Routes>
                     <Route path="/Login" element={<Login />} />
@@ -65,7 +65,7 @@ function App() {
                     <Route path="/ForgotPassword" element={<ForgotPassword />} />
                     <Route path="/ChangePassword" element={<ChangePassword />} />
                 </Routes>
-                {/* <Footer /> */}
+                <Footer />
             </Router>
         </div>
     );
