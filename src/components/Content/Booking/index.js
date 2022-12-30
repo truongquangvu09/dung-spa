@@ -35,6 +35,7 @@ function BookingContent() {
     const [timeBooking, setTimeBooking] = React.useState(dayjs(new Date()));
     const [service, setService] = React.useState('');
     const [message, setMessage] = useState('');
+    const [statu, setStatu] = useState('Chưa xác nhận');
 
     const [success, setSuccess] = useState('');
     const [errorSuccess, setErrorSuccess] = useState('');
@@ -43,9 +44,9 @@ function BookingContent() {
         setService(event.target.value);
     };
 
-    const clickBooking = async (name, email, phone) => {
+    const clickBooking = (name, email, phone) => {
         try {
-            const docRef = await addDoc(collection(db, 'booking'), {
+            addDoc(collection(db, 'booking'), {
                 nameGuest: name,
                 email: email,
                 phoneN: phone,
@@ -53,29 +54,24 @@ function BookingContent() {
                 timeBook: dayjs(timeBooking).format('HH:mm'),
                 service,
                 message,
+                statu,
             })
                 .then(() => {
-                    toast.success('Tạo lịch thành công');
-                    console.log('Document written with ID: ', docRef.id);
                     console.log('Thêm thành công');
-
-                    setTimeout(() => {
-                        setSuccess('');
-                    }, 1500);
+                    alert('Tạo lịch thành công');
+                    // toast.success('Tạo lịch thành công');
+                    // setTimeout(() => {
+                    //     setSuccess('');
+                    // }, 1500);
                 })
                 .catch((e) => {
-                    console.log('Thêm không thành công');
+                    console.log('Thêm KO thành công');
+                    console.log(e);
+                    alert('Vui lòng nhập đúng thông tin');
                 });
         } catch (error) {
             console.error('Error adding document: ', error);
         }
-        // console.log(nameGuest);
-        // console.log(email);
-        // console.log(phoneN);
-        // console.log(dayjs(dateB).format('DD/MM/YYYY'));
-        // console.log(dayjs(timeBooking).format('HH:mm'));
-        // console.log(age);
-        // console.log(message);
     };
     const formik = useFormik({
         initialValues: {
@@ -125,8 +121,10 @@ function BookingContent() {
                         <div className={cx('form-inner')}>
                             <div className={cx('form-row')}>
                                 <input
+                                    id="name"
+                                    name="name"
                                     value={formik.values.name}
-                                    // onBlur={formik.handleBlur}
+                                    onBlur={formik.handleBlur}
                                     onChange={formik.handleChange('name')}
                                     type="text"
                                     placeholder="Họ và tên"
@@ -137,10 +135,10 @@ function BookingContent() {
                             </div>
                             <div className={cx('form-row')}>
                                 <input
-                                    id="name"
-                                    name="name"
+                                    id="email"
+                                    name="email"
                                     value={formik.values.email}
-                                    //onBlur={formik.handleBlur}
+                                    onBlur={formik.handleBlur}
                                     onChange={formik.handleChange('email')}
                                     type="text"
                                     placeholder="Email"
@@ -153,8 +151,10 @@ function BookingContent() {
                         <div className={cx('form-inner')}>
                             <div className={cx('form-row')}>
                                 <input
+                                    id="phone"
+                                    name="phone"
                                     value={formik.values.phone}
-                                    // onBlur={formik.handleBlur}
+                                    onBlur={formik.handleBlur}
                                     onChange={formik.handleChange('phone')}
                                     type="text"
                                     placeholder="Số điện thoại"
@@ -214,6 +214,7 @@ function BookingContent() {
                                                 id="demo-simple-select"
                                                 value={service}
                                                 label="Age"
+                                                // onBlur={formik.handleBlur}
                                                 onChange={handleChange}
                                             >
                                                 <MenuItem value={1}>Massage</MenuItem>
@@ -235,7 +236,7 @@ function BookingContent() {
                             ></textarea>
                         </div>
                         <div className={cx('form-button')}>
-                            <button className={cx('smtBooking')} id="summit">
+                            <button className={cx('smtBooking')} type="submit" id="summit">
                                 ĐẶT
                             </button>
                         </div>

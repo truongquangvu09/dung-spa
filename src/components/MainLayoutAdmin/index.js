@@ -3,7 +3,7 @@ import VerticalTabs from './Main/index';
 
 function MainLayoutAdmin() {
     return (
-        <div style={{ paddingTop: '110px' }}>
+        <div style={{ paddingTop: '130px' }}>
             <VerticalTabs />
         </div>
     );
