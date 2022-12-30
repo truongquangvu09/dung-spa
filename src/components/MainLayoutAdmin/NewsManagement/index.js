@@ -85,7 +85,6 @@ function DataTableNews() {
         };
         fetchData();
     }, []);
-    console.log(data);
 
     const style = {
         position: 'absolute',

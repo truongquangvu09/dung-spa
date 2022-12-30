@@ -9,7 +9,7 @@ import UploadIcon from '@mui/icons-material/Upload';
 import { red } from '@mui/material/colors';
 
 import { auth, db } from '../../../FireBase/FireBase';
-import { collection, doc, query, where, getDocs, deleteDoc } from 'firebase/firestore';
+import { collection, doc, query, where, getDocs, deleteDoc, updateDoc } from 'firebase/firestore';
 
 import { ToastContainer, toast } from 'react-toastify';
 import { createTheme, ThemeProvider, Tooltip } from '@mui/material';
@@ -21,6 +21,8 @@ const theme = createTheme({
 function DataBooking() {
     // const [checkConfirm, setCheckConfirm] = useEffect({});
     const [data, setData] = useState([]);
+    const [values, setValues] = useState([]);
+    // const x = ;
 
     const handleDelete = async (id) => {
         try {
@@ -30,6 +32,23 @@ function DataBooking() {
         } catch (err) {}
     };
 
+    const handleAccect = async (id) => {
+        console.log(id);
+        const update = doc(db, 'booking', id);
+        console.log(update);
+
+        await updateDoc(update, { statu: 'Đã xác nhận' })
+            .then(() => {
+                toast.success('Cập nhật thành công');
+                const newData = data.map((item) => {
+                    return item;
+                });
+                setValues(newData);
+            })
+            .catch((err) => {
+                toast.error('cap nhat that bai');
+            });
+    };
     useEffect(() => {
         const fetchData = async () => {
             let list = [];
@@ -42,22 +61,19 @@ function DataBooking() {
             } catch (err) {}
         };
         fetchData();
-    }, []);
-
-    const clickConfirm = () => {};
-    useEffect(() => {});
-
-    const iconcConfirm = () => {
-        return <DownloadDoneIcon sx={{ fontSize: 20 }} />;
-    };
-
+    }, [values]);
     const columns = [
-        // { field: 'id', headerName: 'ID', width: 230 },
         {
-            field: 'iconcConfirm',
+            field: 'statu',
             headerName: 'Trạng thái',
             width: 100,
-            getDetailPanelContent: () => <DownloadDoneIcon sx={{ fontSize: 20 }} />,
+            renderCell: (params) => (
+                <ThemeProvider theme={theme}>
+                    <Tooltip title={params.row.statu}>
+                        <div>{params.row.statu}</div>
+                    </Tooltip>
+                </ThemeProvider>
+            ),
         },
         { field: 'nameGuest', headerName: 'Tên', width: 170 },
         { field: 'service', headerName: 'Dịch vụ', width: 170 },
@@ -85,6 +101,7 @@ function DataBooking() {
             getActions: (params) => [
                 <GridActionsCellItem
                     fontSize="large"
+                    onClick={() => handleAccect(params.row.id)}
                     icon={<AddTaskIcon sx={{ fontSize: 20 }} color="success" />}
                     label="Upload"
                 />,

@@ -73,29 +73,29 @@ function Navbar() {
             }, 2000);
         });
     };
-    //     const headerRef = useRef(null);
-    //     const stickyHeaderFunc = () => {
-    //         window.addEventListener('scroll', () => {
-    //             if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-    //                 headerRef.current.classList.add('sticky_header');
-    //             } else {
-    //                 headerRef.current.classList.remove('sticky_header');
-    //             }
-    //         });
-    //     };
-    //     useEffect(() => {
-    //         stickyHeaderFunc();
-    //         return () => window.removeEventListener('scroll', stickyHeaderFunc);
-    //    });
-    // const [sticky, setSticky] = useState(false);
-    // function setFixed() {
-    //     if (window.scrollY >= 120) {
-    //         setSticky(true);
-    //     } else {
-    //         setSticky(false);
-    //     }
-    // }
-    // window.addEventListener('scroll', setFixed);
+    const headerRef = useRef(null);
+    const stickyHeaderFunc = () => {
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+                headerRef.current.classList.add('sticky_header');
+            } else {
+                headerRef.current.classList.remove('sticky_header');
+            }
+        });
+    };
+    useEffect(() => {
+        stickyHeaderFunc();
+        return () => window.removeEventListener('scroll', stickyHeaderFunc);
+    });
+    const [sticky, setSticky] = useState(false);
+    function setFixed() {
+        if (window.scrollY >= 120) {
+            setSticky(true);
+        } else {
+            setSticky(false);
+        }
+    }
+    window.addEventListener('scroll', setFixed);
     return (
         <>
             <ToastContainer autoClose={1500} />
@@ -263,7 +263,7 @@ function Navbar() {
                 <div>
                     <Outlet />
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </header>
         </>
     );

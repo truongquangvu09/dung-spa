@@ -82,14 +82,14 @@ function ContentServicePage() {
                                 <h3 className={cx('pricing_title')}>MASSAGE</h3>
                                 <div className={cx('cmsmasters_price_wrap')}>
                                     <span className={cx('cmsmasters_currency')}>$</span>
-                                    <span className={cx('cmsmasters_price')}>69.99</span>
+                                    <span className={cx('cmsmasters_price')}>Free</span>
                                     <p className={cx('cmsmasters_period')}>Truyên thông</p>
                                     <p className={cx('cmsmasters_period')}>Đá nóng</p>
                                     <p className={cx('cmsmasters_period')}>Hoa oải hương</p>
                                 </div>
                                 <NavLink to="/Booking">
                                     <button className={cx('btn_buyService')}>
-                                        <p className={cx('txt3_buyService')}>MUA</p>
+                                        <p className={cx('txt3_buyService')}>ĐẶT</p>
                                     </button>
                                 </NavLink>
                             </div>
