@@ -28,7 +28,7 @@ function ViewPay() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const [etc, setEtc] = useState('off');
+    const [etc, setEtc] = useState('Thanh toán khi nhận hàng');
 
     const formik = useFormik({
         initialValues: {
@@ -73,7 +73,9 @@ function ViewPay() {
                 address: address,
                 etc: etc,
                 totalAmount: totalAmount,
-                status: 'Đang chờ thành toán',
+                status: 'Đang chờ xác nhận',
+                email: values.email,
+                phone: values.phone,
                 note: values.note,
                 time: time,
             }).then(() => {
@@ -316,7 +318,7 @@ function ViewPay() {
                                                     name="checkout"
                                                     value="bank"
                                                     checked
-                                                    onClick={() => setEtc('bank')}
+                                                    onClick={() => setEtc('Chuyển khoản ngân hàng')}
                                                 />
 
                                                 <label>Chuyển khoản ngân hàng</label>
@@ -334,7 +336,7 @@ function ViewPay() {
                                                     name="checkout"
                                                     value="check"
                                                     checked
-                                                    onClick={() => setEtc('check')}
+                                                    onClick={() => setEtc('chi phiếu')}
                                                 />
 
                                                 <label>Kiểm tra thanh toán</label>

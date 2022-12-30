@@ -114,8 +114,8 @@ function DataTableNews() {
         {
             field: 'time',
             headerName: 'Ngày đăng',
-            type: 'number',
-            width: 200,
+            width: 250,
+            renderCell: (params) => <div>{String(new Date(params.row.time.seconds * 1000))}</div>,
         },
         {
             field: 'newDescription',

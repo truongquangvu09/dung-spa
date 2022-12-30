@@ -129,6 +129,7 @@ function DataTableProducts() {
             headerName: 'Giá(đ)',
             type: 'number',
             width: 130,
+            renderCell: (params) => <div>{Number(params.row.productPrice).toLocaleString()}</div>,
         },
         { field: 'productDiscount', headerName: 'Giảm giá(%)', type: 'number', width: 130, editable: true },
         {
@@ -253,20 +254,20 @@ function DataTableProducts() {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Giá :</th>
+                                        <th>Giá(₫) :</th>
                                         <td>
                                             {' '}
                                             <input
                                                 type="text"
                                                 name="productPrice"
-                                                value={productPrice}
+                                                value={Number(productPrice).toLocaleString()}
                                                 onChange={handleChange('productPrice')}
                                                 placeholder="Nhập giá sản phẩm mới"
                                             />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Giảm giá :</th>
+                                        <th>Giảm giá(%) :</th>
                                         <td>
                                             {' '}
                                             <input

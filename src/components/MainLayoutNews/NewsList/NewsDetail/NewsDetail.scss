@@ -153,7 +153,7 @@
             background-color: #fff;
         }
     }
-    input[type='submit'] {
+    input[type="submit"] {
         background-color: #2d2a27;
         color: #fff;
         border-color: rgba(0, 0, 0, 0.05);
@@ -173,7 +173,7 @@
             color: #222;
         }
     }
-    input[type='text'] {
+    input[type="text"] {
         border: 1px solid #ddd;
         padding: 0 12px;
         height: 2.507em;
@@ -201,7 +201,7 @@
 }
 .comment-form-email {
     flex: 1;
-    padding-right: 15px;
+    // padding-right: 15px;
 }
 .comment-form-url {
     flex: 1;
@@ -211,5 +211,23 @@
     label {
         padding-top: 5px;
         margin-left: 10px;
+    }
+}
+.comments-info {
+    .avt {
+        font-size: 25px;
+    }
+    .userName {
+        font-size: 18px;
+        padding: 0 15px;
+        color: #222222;
+        font-weight: bold;
+    }
+    .commentDate {
+        font-size: 10px;
+    }
+    .commentText {
+        font-size: 16px;
+        margin-left: 40px;
     }
 }

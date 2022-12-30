@@ -40,8 +40,8 @@ function NewsListContent(props) {
                                 <div className={cx('badge-news')}>
                                     <div className={cx('badge-circle')}>
                                         <div class={cx('badge-inner')}>
-                                            <span class="post-date-day">{Number(item.newTime)}</span> <br />
-                                            <span class="post-date-month is-xsmall">Th{item.month}</span>
+                                            <span class="post-date-day">24</span> <br />
+                                            <span class="post-date-month is-xsmall">Th{item.month}12</span>
                                         </div>
                                     </div>
                                 </div>

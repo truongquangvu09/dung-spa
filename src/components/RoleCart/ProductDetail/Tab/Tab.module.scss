@@ -29,7 +29,26 @@
         margin-bottom: 20px;
     }
 }
+.comments-info {
+    .avt {
+        font-size: 25px;
+    }
+    .userName {
+        font-size: 18px;
+        padding: 0 15px;
+        color: #222222;
+        font-weight: bold;
+    }
+    .commentDate {
+        font-size: 10px;
+    }
+    .commentText {
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
 .review-form-wrapper {
+    margin-top: 10px;
     .review-form-inner {
         border-color: #2d2a27;
         border: 2px solid #2d2a27;
