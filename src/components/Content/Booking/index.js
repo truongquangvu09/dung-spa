@@ -217,9 +217,9 @@ function BookingContent() {
                                                 // onBlur={formik.handleBlur}
                                                 onChange={handleChange}
                                             >
-                                                <MenuItem value={1}>Massage</MenuItem>
-                                                <MenuItem value={2}>Trị mụn</MenuItem>
-                                                <MenuItem value={3}>Trị Thâm</MenuItem>
+                                                <MenuItem value={'massage'}>Massage</MenuItem>
+                                                <MenuItem value={'trị mụn'}>Trị mụn</MenuItem>
+                                                <MenuItem value={'trị thâm'}>Trị Thâm</MenuItem>
                                             </Select>
                                         </ThemeProvider>
                                     </FormControl>

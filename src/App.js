@@ -23,6 +23,9 @@ import Admin from './pages/Admin/index';
 import SalesManagement from './components/MainLayoutAdmin/SalesManagement/index';
 import ProtectedRouter from './routers/ProtectedRouter';
 import Footer from './components/Layout/Footer';
+import DataTableProducts from './components/MainLayoutAdmin/ProductsManagement/index';
+import DataTableUsers from './components/MainLayoutAdmin/UsersManagement/index';
+import DataTableOrders from './components/MainLayoutAdmin/OrdersManagement/index';
 
 function App() {
     return (
@@ -30,7 +33,6 @@ function App() {
             <Router>
                 <Navbar />
                 <Routes>
-                    {/* <Route path="" element={<Navbar />}> */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/Introduce" element={<AboutPage />} />
                     <Route path="/Shop" element={<Shoppage />}>
@@ -38,6 +40,28 @@ function App() {
                         <Route path=":id" element={<ProductDetail />} />
                         <Route path="New_Detail" element={<NewDetail />} />
                     </Route>
+                    <Route path="/Services" element={<ServicesPage />} />
+                    <Route path="/Contact" element={<ContactPage />} />
+                    <Route path="/Booking" element={<BookingPage />} />
+                    <Route path="/Cart" element={<CartPage />} />
+                    <Route
+                        path="ViewPayCart"
+                        element={
+                            <ProtectedRouter>
+                                <ViewPayCart />
+                            </ProtectedRouter>
+                        }
+                    />
+                    <Route path="/News" element={<NewsPage />}>
+                        <Route path="" element={<NewsListContent />} />
+                        <Route path=":id" element={<NewsDetailContent />} />
+                    </Route>
+                    <Route path="/UserProfile" element={<Profiles />} />
+                    <Route path="/Admin" element={<Admin />} />
+                    <Route path="/Sales" element={<SalesManagement />} />
+                    <Route path="/Products" element={<DataTableProducts />} />
+                    <Route path="/User" element={<DataTableUsers />} />
+                    <Route path="/Order" element={<DataTableOrders />} />
                     <Route path="/Services" element={<ServicesPage />} />
                     <Route path="/Contact" element={<ContactPage />} />
                     <Route path="/Booking" element={<BookingPage />} />

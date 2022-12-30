@@ -109,7 +109,7 @@ function Navbar() {
                             alt="#"
                         />
                     </div>
-                    {!loggedUser && (
+                    {!loggedUser ? (
                         <div className={cx('wrapper_menu')}>
                             <ol className={cx('menu')}>
                                 <li className={cx('item_menu')}>
@@ -169,8 +169,7 @@ function Navbar() {
                                 </li>
                             </ol>
                         </div>
-                    )}
-                    {loggedUser && (
+                    ) : (
                         <div className={cx('wrapper_menu', 'wrapper_menu_user')}>
                             <ol className={cx('menu')}>
                                 <li className={cx('item_menu')}>
@@ -183,24 +182,12 @@ function Navbar() {
                                         GIỚI THIỆU
                                     </NavLink>
                                 </li>
-                                {loggedUser[0].email === 'truongquangvuu09@gmail.com' ? (
-                                    <li className={cx('item_menu')}>
-                                        <NavLink className={cx('link_item_menu')} to="/Shop">
-                                            CỬA HÀNG
-                                        </NavLink>
-                                    </li>
-                                ) : (
-                                    <li className={cx('item_menu')}>
-                                        <NavLink className={cx('link_item_menu')} to="/Shop">
-                                            CỬA HÀNG
-                                        </NavLink>
-                                    </li>
-                                )}
-                                {/* <li className={cx('item_menu')}>
-                                <NavLink className={cx('link_item_menu')} to="/Shop">
-                                    CỬA HÀNG
-                                </NavLink>
-                            </li> */}
+
+                                <li className={cx('item_menu')}>
+                                    <NavLink className={cx('link_item_menu')} to="/Shop">
+                                        CỬA HÀNG
+                                    </NavLink>
+                                </li>
                                 <li className={cx('item_menu')}>
                                     <NavLink className={cx('link_item_menu')} to="/Services">
                                         DỊCH VỤ

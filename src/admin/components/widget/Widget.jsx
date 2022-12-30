@@ -10,9 +10,11 @@ import { useEffect, useState } from 'react';
 import { db } from '../../../FireBase/FireBase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 
+import { Link } from 'react-router-dom';
+
 const Widget = ({ type }) => {
-    const [amount, setAmount] = useState(null);
-    const [diff, setDiff] = useState(null);
+    const [amount, setAmount] = useState(11000);
+    const [diff, setDiff] = useState(10);
     let data;
 
     switch (type) {
@@ -20,7 +22,7 @@ const Widget = ({ type }) => {
             data = {
                 title: 'USERS',
                 isMoney: false,
-                link: 'See all users',
+                link: <Link to="/User">see all users</Link>,
                 query: 'users',
                 icon: (
                     <PersonOutlinedIcon
@@ -37,7 +39,7 @@ const Widget = ({ type }) => {
             data = {
                 title: 'PRODUCTS',
                 isMoney: false,
-                link: 'See details',
+                link: <Link to="/Products">see details</Link>,
                 query: 'products',
                 icon: (
                     <AccountBalanceWalletOutlinedIcon
@@ -54,7 +56,7 @@ const Widget = ({ type }) => {
             data = {
                 title: 'ORDERS',
                 isMoney: false,
-                link: 'View all orders',
+                link: <Link to="/Order">View all orders</Link>,
                 query: 'orders',
                 icon: (
                     <ShoppingCartOutlinedIcon
