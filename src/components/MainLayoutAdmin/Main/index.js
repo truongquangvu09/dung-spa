@@ -19,7 +19,7 @@ import TabsNews from './../NewsManagement/TabNews';
 import TabProducts from './../ProductsManagement/TabProducts';
 import SalesManagement from './../SalesManagement/index';
 import Datatable from './../../../admin/components/datatable/Datatable';
-import BasicDetailPanels from '../OrdersManagement';
+import DataTableOrders from '../OrdersManagement';
 import DataBooking from './../BookingManagement/index';
 
 const cx = classNames.bind(styles);
@@ -136,7 +136,7 @@ function VerticalTabs() {
                 <DataTableUsers />
             </TabPanel>
             <TabPanel value={value} index={5}>
-                {/* <BasicDetailPanels /> */}
+                <DataTableOrders />
             </TabPanel>
         </Box>
     );

@@ -23,6 +23,9 @@ import Admin from './pages/Admin/index';
 import SalesManagement from './components/MainLayoutAdmin/SalesManagement/index';
 import ProtectedRouter from './routers/ProtectedRouter';
 import Footer from './components/Layout/Footer';
+import DataTableProducts from './components/MainLayoutAdmin/ProductsManagement/index';
+import DataTableUsers from './components/MainLayoutAdmin/UsersManagement/index';
+import DataTableOrders from './components/MainLayoutAdmin/OrdersManagement/index';
 
 function App() {
     return (
@@ -57,6 +60,9 @@ function App() {
                         <Route path="/UserProfile" element={<Profiles />} />
                         <Route path="/Admin" element={<Admin />} />
                         <Route path="/Sales" element={<SalesManagement />} />
+                        <Route path="/Products" element={<DataTableProducts />} />
+                        <Route path="/User" element={<DataTableUsers />} />
+                        <Route path="/Order" element={<DataTableOrders />} />
                     </Route>
                 </Routes>
                 <Routes>

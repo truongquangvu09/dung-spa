@@ -3,6 +3,7 @@ import styles from './HomeContent.module.scss';
 import classNames from 'classnames/bind';
 import { NavLink } from 'react-router-dom';
 import { listItemMenuHomePage } from '../../../data/data';
+import { Key } from '@mui/icons-material';
 const cx = classNames.bind(styles);
 
 function HomeContent() {
@@ -63,7 +64,7 @@ function HomeContent() {
                     </div>
                     <div className={cx('list_menu')}>
                         {listItemMenuHomePage.map((e, index) => (
-                            <div className={cx('item_menu')}>
+                            <div className={cx('item_menu')} key={index}>
                                 <div className={cx('w_img')}>
                                     <img className={cx('imgTT')} src={e.img} />
                                 </div>
