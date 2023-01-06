@@ -80,7 +80,7 @@ function MainLayoutCart() {
                             <Tippy
                                 placement="bottom-start"
                                 interactive="true"
-                                visible={showResult && searchResult.length > 0}
+                                visible={showResult && searchResult.length > 4}
                                 render={(attrs) => (
                                     <PopperWrapper>
                                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>

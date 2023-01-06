@@ -208,7 +208,7 @@ function DataTableOrders() {
                     />
                 ) : null}
             </div>
-            <div>
+            <div className={cx('modalOrder')}>
                 <Modal
                     open={open}
                     onClose={handleClose}

@@ -20,7 +20,7 @@ function HomeContent() {
                         <h3 className={cx('txt_intro1')}>
                             Tất cả các loại trị liệu spa & làm đẹp cho cơ thể và tâm hồn của bạn
                         </h3>
-                        <NavLink to="/Booking">
+                        <NavLink to="/Services">
                             <button className={cx('btn_banner2')}>
                                 <p className={cx('txt3_banner2')}>KHÁM PHÁ NGAY</p>
                             </button>

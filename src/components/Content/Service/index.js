@@ -41,7 +41,7 @@ function ContentServicePage() {
                 <div className={cx('wrapper_info_txt')}>
                     <p className={cx('info_text')}>CHÀO MỪNG ĐẾN VỚI DUNG SPA</p>
                     <h2 className={cx('info_text_1')}>
-                        Chúng tôi là một phòng khám Spa và làm đẹp chuyên nghiệp ở trung tâm New York.
+                        Chúng tôi là một phòng khám Spa và làm đẹp chuyên nghiệp ở trung tâm Đà Nẵng.
                     </h2>
                     <p className={cx('info_text_2')}>
                         Bạn có thể tham gia vào một liệu pháp nuôi dưỡng hoặc ngâm cả ngày các phương pháp trị liệu bằng

@@ -19,6 +19,7 @@ import { db } from '../../../FireBase/FireBase';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const theme = createTheme({
@@ -39,6 +40,7 @@ function BookingContent() {
 
     const [success, setSuccess] = useState('');
     const [errorSuccess, setErrorSuccess] = useState('');
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setService(event.target.value);
@@ -58,8 +60,10 @@ function BookingContent() {
             })
                 .then(() => {
                     console.log('Thêm thành công');
-                    alert('Tạo lịch thành công');
-                    // toast.success('Tạo lịch thành công');
+                    // alert('Tạo lịch thành công');
+                    toast.success('Tạo lịch thành công');
+                    navigate('/Services');
+
                     // setTimeout(() => {
                     //     setSuccess('');
                     // }, 1500);

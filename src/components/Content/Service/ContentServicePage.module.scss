@@ -31,7 +31,7 @@
 }
 .info_text {
     margin-bottom: 25px;
-    font-family: 'Karla', 'Nimbus Sans L', sans-serif;
+    font-family: "Karla", "Nimbus Sans L", sans-serif;
     font-size: 16px;
     text-align: center;
     line-height: 28px;
@@ -43,7 +43,7 @@
     width: 100%;
     text-align: center;
     line-height: 44px;
-    font-family: 'Marcellus', 'Century Schoolbook L', serif;
+    font-family: "Marcellus", "Century Schoolbook L", serif;
 }
 .info_text_2 {
     margin-top: 30px;
@@ -86,7 +86,10 @@
     font-weight: 700;
     text-decoration: none;
     color: #555;
-    font-family: 'Marcellus', 'Century Schoolbook L', serif;
+    font-family: "Marcellus", "Century Schoolbook L", serif;
+    &:hover {
+        color: #b8a48d;
+    }
 }
 .cmsmasters_text {
     color: #777;
@@ -135,7 +138,7 @@
 }
 .txt_bn3 {
     color: #6a6560;
-    font-family: 'Marcellus', 'Century Schoolbook L', serif;
+    font-family: "Marcellus", "Century Schoolbook L", serif;
 }
 .txt_bn4 {
     padding-bottom: 20px;

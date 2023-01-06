@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 
-import { Outlet, NavLink, useNavigate } from 'react-router-dom';
+import { Outlet, NavLink, useNavigate, Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import Footer from '../Footer';
@@ -144,9 +144,9 @@ function Navbar() {
                                     </NavLink>
                                 </li>
                                 <li className={cx('item_menu')}>
-                                    <NavLink className={cx('link_item_menu')} to="/Booking">
+                                    <Link className={cx('link_item_menu')} to="/Booking">
                                         ONLINE BOOKING
-                                    </NavLink>
+                                    </Link>
                                 </li>
                                 <li className={cx('item_menu')}>
                                     <NavLink className={cx('link_item_menu')} to="/Cart">
@@ -208,7 +208,7 @@ function Navbar() {
                                         ONLINE BOOKING
                                     </NavLink>
                                 </li>
-                                {loggedUser[0].email === 'truongquangvuu09@gmail.com' ? (
+                                {loggedUser[1].email === 'truongquangvuu09@gmail.com' ? (
                                     <li className={cx('item_menu')}>
                                         <NavLink className={cx('link_item_menu')} to="/Sales">
                                             {/* <FontAwesomeIcon className={cx('cart-icon')} icon={faCartShopping} /> */}

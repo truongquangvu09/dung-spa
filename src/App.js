@@ -26,7 +26,7 @@ import Footer from './components/Layout/Footer';
 import DataTableProducts from './components/MainLayoutAdmin/ProductsManagement/index';
 import DataTableUsers from './components/MainLayoutAdmin/UsersManagement/index';
 import DataTableOrders from './components/MainLayoutAdmin/OrdersManagement/index';
-
+import BookingContent from './components/Content/Booking';
 function App() {
     return (
         <div>
@@ -42,7 +42,14 @@ function App() {
                     </Route>
                     <Route path="/Services" element={<ServicesPage />} />
                     <Route path="/Contact" element={<ContactPage />} />
-                    <Route path="/Booking" element={<BookingPage />} />
+                    <Route
+                        path="Booking"
+                        element={
+                            <ProtectedRouter>
+                                <BookingContent />
+                            </ProtectedRouter>
+                        }
+                    />
                     <Route path="/Cart" element={<CartPage />} />
                     <Route
                         path="ViewPayCart"
@@ -64,7 +71,14 @@ function App() {
                     <Route path="/Order" element={<DataTableOrders />} />
                     <Route path="/Services" element={<ServicesPage />} />
                     <Route path="/Contact" element={<ContactPage />} />
-                    <Route path="/Booking" element={<BookingPage />} />
+                    <Route
+                        path="Booking"
+                        element={
+                            <ProtectedRouter>
+                                <BookingContent />
+                            </ProtectedRouter>
+                        }
+                    />
                     <Route path="/Cart" element={<CartPage />} />
                     <Route
                         path="ViewPayCart"

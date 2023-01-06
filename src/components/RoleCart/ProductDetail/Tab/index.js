@@ -251,6 +251,51 @@ function BasicTabs() {
                                     </span>
                                     <span className={cx('userName')}>{item.userName}</span>
                                     <span className={cx('commentDate')}> {item.commentDate}</span>
+                                    {item.rating === 1 ? (
+                                        <div className={cx('rating')}>
+                                            <FontAwesomeIcon icon={faStar} />
+                                        </div>
+                                    ) : (
+                                        <></>
+                                    )}
+                                    {item.rating === 2 ? (
+                                        <div className={cx('rating')}>
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                        </div>
+                                    ) : (
+                                        <></>
+                                    )}
+                                    {item.rating === 3 ? (
+                                        <div className={cx('rating')}>
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                        </div>
+                                    ) : (
+                                        <></>
+                                    )}
+                                    {item.rating === 4 ? (
+                                        <div className={cx('rating')}>
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                        </div>
+                                    ) : (
+                                        <></>
+                                    )}
+                                    {item.rating === 5 ? (
+                                        <div className={cx('rating')}>
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <FontAwesomeIcon icon={faStar} />
+                                        </div>
+                                    ) : (
+                                        <></>
+                                    )}
                                     <div className={cx('commentText')}>{item.text}</div>
                                 </div>
                             );

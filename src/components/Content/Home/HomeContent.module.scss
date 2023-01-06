@@ -61,7 +61,7 @@
 }
 .info_text {
     margin-bottom: 25px;
-    font-family: 'Karla', 'Nimbus Sans L', sans-serif;
+    font-family: "Karla", "Nimbus Sans L", sans-serif;
     font-size: 16px;
     text-align: center;
     line-height: 28px;
@@ -73,7 +73,7 @@
     width: 100%;
     text-align: center;
     line-height: 44px;
-    font-family: 'Marcellus', 'Century Schoolbook L', serif;
+    font-family: "Marcellus", "Century Schoolbook L", serif;
 }
 .info_text_2 {
     margin-top: 30px;
@@ -89,6 +89,10 @@
     height: 50px;
     padding: 10px;
     background-color: #2d2a27;
+    border: none;
+    &:hover {
+        background-color: aqua;
+    }
 }
 .xx {
     font-weight: 600;
@@ -125,6 +129,11 @@
 .btn_menu {
     cursor: pointer;
     background-color: #fff;
+
+    &:hover {
+        background-color: aqua;
+        border: none;
+    }
 }
 .txt_btn_menu {
     line-height: 1.6;
@@ -192,6 +201,10 @@
     background-color: #2d2a27;
     cursor: pointer;
     border: 1px solid #846b4f;
+    &:hover {
+        border: none;
+        background-color: aqua;
+    }
 }
 .txt3_banner1 {
     padding: 10px;
@@ -227,6 +240,11 @@
     height: 60px;
     cursor: pointer;
     background-color: #2d2a27;
+    transition: all 0.5s;
+    border: none;
+    &:hover {
+        background-color: aqua;
+    }
 }
 .txt3_banner2 {
     padding: 10px;

@@ -24,7 +24,7 @@
 .txt_gt1 {
     font-size: 32px;
     line-height: 44px;
-    font-family: 'Marcellus', 'Century Schoolbook L', serif;
+    font-family: "Marcellus", "Century Schoolbook L", serif;
 }
 
 .txt_gt2 {
@@ -86,7 +86,7 @@
     font-size: 28px;
     line-height: 30px;
     font-weight: 500;
-    font-family: 'Marcellus', 'Century Schoolbook L', serif;
+    font-family: "Marcellus", "Century Schoolbook L", serif;
 }
 
 .w_liststieude {
@@ -139,6 +139,10 @@
     height: 40px;
     cursor: pointer;
     background-color: #2d2a27;
+    border: none;
+    &:hover {
+        background-color: aqua;
+    }
 }
 .txt3_banner2 {
     padding: 10px;

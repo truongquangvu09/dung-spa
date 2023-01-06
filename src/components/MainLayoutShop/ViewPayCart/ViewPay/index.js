@@ -223,7 +223,7 @@ function ViewPay() {
                                         placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
                                     />
                                 </p>
-                                <button type="submit">gui 1</button>
+                                <button type="submit">XÁC NHẬN</button>
                             </form>
                         </div>
                         {/* <div className={cx('woocommercee')}>
