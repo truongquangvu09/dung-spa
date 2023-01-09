@@ -22,6 +22,8 @@ import Loader from '../../Loader/Loader';
 
 import { useSelector } from 'react-redux';
 
+import useAuth from '../../../CustomHooks/useAuth';
+
 const cx = classNames.bind(styles);
 // const activeLink = ({ isActive }) => (isActive ? `${styles.active}` : '');
 
@@ -56,6 +58,9 @@ function Navbar() {
     const [isLoading, setIsLoading] = useState(false);
 
     const loggedUser = GetCurrentUser();
+
+    const currentUser = useAuth();
+    console.log(currentUser);
 
     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
     const totalAmount = useSelector((state) => state.cart.totalAmount);
@@ -96,6 +101,7 @@ function Navbar() {
         }
     }
     window.addEventListener('scroll', setFixed);
+
     return (
         <>
             <ToastContainer autoClose={1500} />
@@ -208,7 +214,7 @@ function Navbar() {
                                         ONLINE BOOKING
                                     </NavLink>
                                 </li>
-                                {loggedUser[1].email === 'truongquangvuu09@gmail.com' ? (
+                                {loggedUser[0].email === 'truongquangvuu09@gmail.com' ? (
                                     <li className={cx('item_menu')}>
                                         <NavLink className={cx('link_item_menu')} to="/Sales">
                                             {/* <FontAwesomeIcon className={cx('cart-icon')} icon={faCartShopping} /> */}
